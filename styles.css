@@ -124,8 +124,7 @@ a { color: inherit; text-decoration: none; }
   letter-spacing: 2px;
   font-weight: 700;
   font-style: italic;
-  margin-top: 20px;
-  margin-bottom: 0;
+  margin-bottom: 16px;
 }
 
 .hero h1 {
