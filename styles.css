@@ -328,6 +328,9 @@ a { color: inherit; text-decoration: none; }
 
 .intake-form input,
 .intake-form textarea {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 100%;
   background: var(--near-black);
   border: 1px solid #2a2a2e;
   border-radius: 6px;
