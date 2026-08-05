@@ -37,9 +37,9 @@
     <h1>Intake Form</h1>
     <p class="intake-sub">Fill this out and I'll review it and reach out to get you started.</p>
 
-    <form class="intake-form" action="https://formspree.io/f/mdenolvr" method="POST">
+    <form id="intake-form" class="intake-form" action="https://formspree.io/f/mdenolvr" method="POST">
       <input type="hidden" name="_subject" value="New SOVRYX Training Intake Submission">
-      <input type="hidden" name="_next" value="https://sovryxtraining.com/thank-you.html">
+      <p id="intake-error" class="intake-error" hidden>Something went wrong submitting the form. Please try again, or email me directly.</p>
 
       <label for="name">Full Name</label>
       <input type="text" id="name" name="name" required>
@@ -108,6 +108,28 @@
     </div>
   </div>
 </footer>
+
+<script>
+  const form = document.getElementById('intake-form');
+  const errorMsg = document.getElementById('intake-error');
+  form.addEventListener('submit', function (e) {
+    e.preventDefault();
+    errorMsg.hidden = true;
+    fetch(form.action, {
+      method: 'POST',
+      body: new FormData(form),
+      headers: { 'Accept': 'application/json' }
+    }).then(function (response) {
+      if (response.ok) {
+        window.location.href = 'thank-you.html';
+      } else {
+        errorMsg.hidden = false;
+      }
+    }).catch(function () {
+      errorMsg.hidden = false;
+    });
+  });
+</script>
 
 </body>
 </html>

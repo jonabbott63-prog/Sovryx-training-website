@@ -329,6 +329,13 @@ a { color: inherit; text-decoration: none; }
   flex-direction: column;
 }
 
+.intake-error {
+  color: #e07a5f;
+  font-size: 14px;
+  text-align: center;
+  margin: 0 0 16px;
+}
+
 .intake-form label {
   color: var(--white);
   font-size: 14px;
