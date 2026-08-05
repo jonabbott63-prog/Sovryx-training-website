@@ -218,8 +218,15 @@ a { color: inherit; text-decoration: none; }
   padding: 28px;
 }
 
-.card-icon { display: block; margin-bottom: 12px; }
-.card h3 { color: var(--gold); font-size: 18px; }
+.card-heading {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 10px;
+}
+
+.card-icon { flex-shrink: 0; }
+.card h3 { color: var(--gold); font-size: 18px; margin: 0; }
 .card p { margin: 0; font-size: 15px; }
 
 /* Offer */
