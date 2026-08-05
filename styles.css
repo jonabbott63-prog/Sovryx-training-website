@@ -218,6 +218,7 @@ a { color: inherit; text-decoration: none; }
   padding: 28px;
 }
 
+.card-icon { display: block; margin-bottom: 12px; }
 .card h3 { color: var(--gold); font-size: 18px; }
 .card p { margin: 0; font-size: 15px; }
 
@@ -289,10 +290,21 @@ a { color: inherit; text-decoration: none; }
   border-bottom: none;
 }
 
+.faq-question {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 8px;
+}
+
+.faq-icon {
+  flex-shrink: 0;
+}
+
 .faq-item h3 {
   color: var(--gold);
   font-size: 16px;
-  margin-bottom: 8px;
+  margin: 0;
 }
 
 .faq-item p {
