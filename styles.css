@@ -421,9 +421,12 @@ a { color: inherit; text-decoration: none; }
   margin: 0 0 16px;
 }
 
-.intake-page h1,
-.intake-page .intake-sub {
+.intake-page h1 {
   color: var(--gold);
+}
+
+.intake-page .intake-sub {
+  color: var(--white);
 }
 
 .intake-form label {
